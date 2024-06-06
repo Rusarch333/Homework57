@@ -1,0 +1,61 @@
+.upper-case {
+  text-transform: uppercase;
+}
+.actors-heading {
+  color: #fc4747;
+  font-size: 2.7rem;
+  text-align: center;
+}
+.actors-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  min-width: 450px;
+  max-width: 1200px;
+  width: 100%;
+  margin: auto;
+}
+.actors-container-actor-card {
+  padding: 50px 50px;
+  margin: 0;
+  box-shadow: 0 2px 15px rgba(7, 4, 4, 0.1);
+  text-align: center;
+}
+.actor-avatar {
+  display: block;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.actor-full-name {
+  margin-top: 15px;
+}
+.contact-menu {
+  padding: 0;
+}
+.contact-menu-item {
+  display: inline-block;
+  margin-right: 0.5rem;
+}
+.contact-menu-item:last-of-type {
+  margin-right: 0;
+}
+.contact-menu-link {
+  --contact-menu-link-size: 36px;
+
+  display: block;
+  width: var(--contact-menu-link-size);
+  height: var(--contact-menu-link-size);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.facebook {
+  background-image: url(./../icons/facebook.svg);
+}
+.instagram {
+  background-image: url(./../icons/instagram.svg);
+}
+.twitter {
+  background-image: url(./../icons/twitter.svg);
+}
