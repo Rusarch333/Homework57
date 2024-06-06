@@ -2,7 +2,7 @@
 
 const root = document.getElementById('root');
 
-fetch('/assets/js/data1.json')
+fetch('/assets/js/data.json')
   .then((response) => response.json())
   .then((data) => {
     const h2Actors = createElement(
