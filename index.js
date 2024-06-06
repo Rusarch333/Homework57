@@ -50,7 +50,7 @@ fetch('/assets/js/data.json')
         });
 
         return createElement('li', { classNames: ['contact-menu-item'] }, a);
-      });
+      }); // end of listItems
 
       const ul = createElement(
         'ul',
@@ -65,7 +65,7 @@ fetch('/assets/js/data.json')
         figcaption,
         ul
       );
-    });
+    }); // end of figures
 
     const divActorsContainer = createElement(
       'div',
