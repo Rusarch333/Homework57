@@ -2,7 +2,7 @@
 
 const root = document.getElementById('root');
 
-fetch('/assets/js/data.json')
+fetch('/assets/js/data1.json')
   .then((response) => response.json())
   .then((data) => {
     const h2Actors = createElement(
@@ -60,7 +60,15 @@ fetch('/assets/js/data.json')
 
       return createElement(
         'figure',
-        { classNames: ['actors-container-actor-card'] },
+        {
+          classNames: ['actors-container-actor-card'],
+          events: {
+            click: ({ currentTarget }) => {
+              currentTarget.parentNode.nextElementSibling.innerText =
+                currentTarget.children[1].innerText;
+            },
+          },
+        },
         img,
         figcaption,
         ul
@@ -90,5 +98,10 @@ fetch('/assets/js/data.json')
     root.append(section);
   })
   .catch((error) => {
-    root.append('Try again.. error - ', error.message); // 404
+    const h1Error = createElement(
+      'h1',
+      { classNames: ['actors-heading', 'actors-heading-error', 'upper-case'] },
+      "Error: can't load actors data!"
+    );
+    root.append(h1Error);
   });
