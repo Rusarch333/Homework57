@@ -1,8 +1,15 @@
+:root {
+  --color-pink: #f86c66;
+}
 .upper-case {
   text-transform: uppercase;
 }
+.actors {
+  width: 100%;
+}
 .actors-heading {
-  color: #fc4747;
+  color: var(--color-pink);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 2.7rem;
   text-align: center;
 }
@@ -16,9 +23,9 @@
   margin: auto;
 }
 .actors-container-actor-card {
-  padding: 50px 50px;
+  padding: 3.13rem 3.13rem;
   margin: 0;
-  box-shadow: 0 2px 15px rgba(7, 4, 4, 0.1);
+  box-shadow: 0 2px 15px #0704041a;
   text-align: center;
 }
 .actor-avatar {
@@ -26,10 +33,15 @@
   width: 200px;
   height: 200px;
   border-radius: 50%;
+  outline: 2px solid var(--color-pink);
+  outline-offset: 0.25rem;
   object-fit: cover;
 }
 .actor-full-name {
-  margin-top: 15px;
+  margin-top: 1.25rem;
+  color: #000000d3;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
 }
 .contact-menu {
   padding: 0;
@@ -58,4 +70,11 @@
 }
 .twitter {
   background-image: url(./../icons/twitter.svg);
+}
+.actors-you-choosed {
+  display: block;
+  width: 1100px;
+  padding: 1.56rem 0;
+  margin: 6.25rem auto 0;
+  background-color: #fcfcfc;
 }

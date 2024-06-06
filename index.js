@@ -5,8 +5,8 @@ const root = document.getElementById('root');
 fetch('/assets/js/data.json')
   .then((response) => response.json())
   .then((data) => {
-    const h1 = createElement(
-      'h1',
+    const h2Actors = createElement(
+      'h2',
       {
         classNames: ['actors-heading', 'upper-case'],
         attributes: { title: 'qwerty', 'data-key': 22 },
@@ -51,8 +51,12 @@ fetch('/assets/js/data.json')
 
         return createElement('li', { classNames: ['contact-menu-item'] }, a);
       });
-      
-      const ul = createElement('ul', { classNames: ['contact-menu'] }, ...listItems);
+
+      const ul = createElement(
+        'ul',
+        { classNames: ['contact-menu'] },
+        ...listItems
+      );
 
       return createElement(
         'figure',
@@ -69,11 +73,18 @@ fetch('/assets/js/data.json')
       ...figures
     );
 
+    const h2YouChoosed = createElement(
+      'h2',
+      { classNames: ['actors-heading', 'actors-you-choosed', 'upper-case'] },
+      'You choosed'
+    );
+
     const section = createElement(
       'section',
       { classNames: ['actors'] },
-      h1,
-      divActorsContainer
+      h2Actors,
+      divActorsContainer,
+      h2YouChoosed
     );
 
     root.append(section);
