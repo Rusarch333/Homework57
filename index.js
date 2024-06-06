@@ -98,10 +98,10 @@ fetch('/assets/js/data.json')
     root.append(section);
   })
   .catch((error) => {
-    const h1Error = createElement(
-      'h1',
+    const h2Error = createElement(
+      'h2',
       { classNames: ['actors-heading', 'actors-heading-error', 'upper-case'] },
       "Error: can't load actors data!"
     );
-    root.append(h1Error);
+    root.append(h2Error);
   });
